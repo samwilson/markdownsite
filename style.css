@@ -1,0 +1,14 @@
+body { line-height:1.6; font-size:large; font-family:sans-serif }
+header { text-align:center }
+div#TOC,
+section,
+article { margin:3em auto; max-width:50em; padding:1em 0; text-align:justify }
+section#abstract { max-width:40em; font-style:italic; line-height:1.1; text-align:justify }
+div#TOC { border:2px solid #ccc; border-width:2px 0 }
+h1, h2, h3 { line-height: 1.2 }
+a { text-decoration:none; color:#060 }
+a:hover { text-decoration:underline }
+footer { text-align:center; font-size:small; border-top:1px solid #ccc; margin-top:3em }
+a.footnoteRef { font-size:smaller }
+figure { display:block; margin:auto; text-align:center }
+figcaption { font-size:smaller; display:block }
