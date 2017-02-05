@@ -30,4 +30,4 @@ git add -A \*.html \*.pdf \*.css
 git commit -m"Files built by Travis."
 
 ## Push the changes back to Github.
-git push -f "https://"$GH_TOKEN"@"$REPO_URL gh-pages:gh-pages
+git push -f "https://"$GH_TOKEN"@"$REPO_URL master:gh-pages
