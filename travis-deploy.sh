@@ -21,7 +21,6 @@ REPO_URL=$(git remote -v | grep push | awk '{print $2}' | grep 'github\.com[:/][
 echo "Repository is $REPO_URL"
 
 ## Build the site, then commit the built files to the master branch.
-git clone https://github.com/samwilson/markdownsite.git
 markdownsite/build.sh .
 cd "$TRAVIS_BUILD_DIR/public"
 git init
