@@ -17,7 +17,7 @@ sudo dpkg -i $PANDOC_DEB
 rm $PANDOC_DEB
 
 ## Get the site's repository name.
-REPO_URL=$(git remote -v | grep push | awk '{print $2}' | grep 'github\.com[:/][^/]*/.*\.git')
+REPO_URL=$(git remote -v | grep push | awk '{print $2}' | grep -o 'github\.com[:/][^/]*/.*\.git')
 echo "Repository is $REPO_URL"
 
 ## Build the site, then commit the built files to the master branch.
@@ -26,7 +26,7 @@ cd "$TRAVIS_BUILD_DIR/public"
 git init
 git config user.name "Travis CI"
 git config user.email "$GH_EMAIL"
-git add -A \*.html \*.pdf \*.css CNAME
+git add -A \*.html \*.pdf \*.css
 git commit -m"Files built by Travis."
 
 ## Push the changes back to Github.
