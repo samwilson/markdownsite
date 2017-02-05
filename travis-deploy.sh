@@ -11,8 +11,8 @@ sudo apt-get update
 sudo apt-get install -y texlive-latex-recommended
 
 ## Install latest Pandoc.
-PANDOC_DEB=pandoc-1.17.2-1-amd64.deb
-wget https://github.com/jgm/pandoc/releases/download/1.17.2/$PANDOC_DEB
+PANDOC_DEB=pandoc-1.19.2.1-1-amd64.deb
+wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/$PANDOC_DEB
 sudo dpkg -i $PANDOC_DEB
 rm $PANDOC_DEB
 
