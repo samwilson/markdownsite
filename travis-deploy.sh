@@ -30,4 +30,9 @@ git add -A \*.html \*.pdf \*.css
 git commit -m"Files built by Travis."
 
 ## Push the changes back to Github.
-git push -f "https://"$GH_TOKEN"@"$REPO_URL master:gh-pages
+if [[ -z "$GH_BRANCH" ]]; then
+	## If we're not on master branch, push to master.
+	echo "Defaulting to push to gh-pages branch; set GH_BRANCH to override"
+	GH_BRANCH="gh-pages"
+fi
+git push -f "https://"$GH_TOKEN"@"$REPO_URL master:$GH_BRANCH
