@@ -41,3 +41,9 @@ Set your .travis.yml file to contain the following:
 	  - markdownsite/travis-deploy.sh
 
 Then, continue from set 4 above.
+
+## Templates
+
+There are two te
+
+cp /usr/share/pandoc/data/templates/default.latex pdf.tpl

@@ -66,9 +66,9 @@ for F in $(find $INDIR -name '*.md' -type f); do
 
 done
 
-## Copy stylesheet and 404 page.
-for F in "style.css" "404.html"; do
-	if [ -f $INDIR"/"$F ]; then
+## Copy stylesheet and static HTML pages.
+for F in "style.css" "404.html" "index.html"; do
+	if [ -f "$INDIR/$F" ]; then
 		cp $INDIR"/"$F $OUTDIR/.
 	else
 		cp $THISDIR"/"$F $OUTDIR/.
