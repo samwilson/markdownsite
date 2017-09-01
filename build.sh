@@ -28,7 +28,8 @@ fi
 echo "PDF template is $PDFTPL"
 
 ## Build all single-page files (HTML and PDF).
-for F in $(find $INDIR -name '*.md' -type f); do
+ALL_MD_FILES=$(find $INDIR -iname '*.md' -type f)
+for F in $ALL_MD_FILES; do
 
 	## Ignore the readme file.
 	if [ $(basename $F) = "README.md" ]; then continue; fi
@@ -66,12 +67,17 @@ for F in $(find $INDIR -name '*.md' -type f); do
 
 done
 
-## Copy stylesheet and static HTML pages.
+## Copy images for HTML (they're already included in the PDFs).
+for F in $(find $INDIR -iname '*.jpg' -type f); do
+	echo "Copying $F"
+	cp "$F" "$OUTDIR/."
+done
+
+## Copy stylesheet, images, and static HTML pages.
 for F in "style.css" "404.html" "index.html"; do
 	if [ -f "$INDIR/$F" ]; then
 		cp $INDIR"/"$F $OUTDIR/.
-	else
+	elif [ -f "$THISDIR/$F" ]; then
 		cp $THISDIR"/"$F $OUTDIR/.
 	fi
 done
-
