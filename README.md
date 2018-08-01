@@ -40,7 +40,7 @@ Set your .travis.yml file to contain the following:
 	script:
 	  - markdownsite/travis-deploy.sh
 
-Then, continue from set 4 above.
+Then, continue from step 4 above.
 
 ## Templates
 
