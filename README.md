@@ -44,6 +44,4 @@ Then, continue from set 4 above.
 
 ## Templates
 
-There are two te
-
-cp /usr/share/pandoc/data/templates/default.latex pdf.tpl
+There are two templates that you can edit: `pdf.tpl` and `html.tpl`.
